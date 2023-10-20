@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="=IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomeeka's portfolio</title>
+    <link rel="stylesheet"href="style.css">
+    <script src="https://kit.fontawesome.com/dd64baa45e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container"> 
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">contact</a></li>
+                <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Python / Web Developer</p>
+            <h1>Hi, I'm <span>B.Bhoomeeka</span></h1>
+        </div>
+    </div>
+</div>
+<!-----------about--------->
+<div id="about"> 
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="user.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1> 
+                <p>
+                    Bridging Business Acumen with Tech Prowess 🌐
+                </p>
+                   <p> As a  BBA Student / graduate and a passionate Python and web developer, 
+                    I'm the fusion of business strategy and technological innovation.
+                     My journey is defined by my relentless pursuit of excellence in the world of business, 
+                     data analysis, and web development.</p>
+
+                     <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links"onclick="opentab('Education')">Education</p>
+                        <p class = "tab-links"onclick="opentab('Experience')">Experience</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul> 
+                            <li><span>Python Development</span></li>
+                            <li><span>Web development</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Excel pro</span></li>
+                            <li><span>Data Analysis</span></li>
+                            
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Education">
+                        <ul> 
+                            <li><span><p style="color: #e90d4f;">2022 - 2025</p></span>BBA From Avinash college of commerce , Hyderabad</li>
+                            <li><span>Currently Studying</span></li>
+                            
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="Experience">
+                        <ul> 
+                            <li><span>I'm a dedicated and ambitious freshman pursuing a Bachelor's
+                                in Business Adminstration.<br> I bring a strong passion for technology,problem-solving skills
+                                 and a track record of successful projects and extracurricular activities
+                                  that demonstrate my potential.</span></li>
+                            
+                        </ul>
+                     </div>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1> 
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2> Web Development</h2>
+                <p>I intend to design and build high-performance websites and
+                     applications to elevate your online presence.</p>
+
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Data Analysis and<br> insights Solutions. </h2>
+                <p>I provide data analysis, visualization, and Excel solutions,
+                  leveraging my expertise in pivot tables to help clients make data-driven decisions with clean, 
+                  actionable insights.</p>
+                     
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2> Web Design </h2>
+                <p>This website portfolio is the Best example for showcasing
+                    my web design service that i would bring to the table</p>
+                     
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"> </i>bhoomikagadgi@gmail.com</p>
+                <p><i class="fa-solid fa-phone"> </i>7702658258</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/xx.bhoomi.ish"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/bhoomeeka/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/BBhoomika117071"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+               
+            </div>
+            
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+
+    function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+
+<script>
+    
+    var sidemenu = document.getElementById("sidemenu");
+
+     function openmenu(){
+        sidemenu.style.right = "0";
+     }
+     function closemenu(){
+        sidemenu.style.right = "-200px";
+     }
+
+</script>
+</body>
+</html>
